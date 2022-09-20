@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include goumitra_test *.css
+recursive-include goumitra_test *.csv
+recursive-include goumitra_test *.html
+recursive-include goumitra_test *.ico
+recursive-include goumitra_test *.js
+recursive-include goumitra_test *.json
+recursive-include goumitra_test *.md
+recursive-include goumitra_test *.png
+recursive-include goumitra_test *.py
+recursive-include goumitra_test *.svg
+recursive-include goumitra_test *.txt
+recursive-exclude goumitra_test *.pyc

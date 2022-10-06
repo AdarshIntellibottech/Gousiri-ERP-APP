@@ -1,0 +1,24 @@
+[
+ {
+  "condition": "doc.is_employee==\"yes\"",
+  "docstatus": 0,
+  "doctype": "Webhook",
+  "enable_security": 0,
+  "enabled": 1,
+  "modified": "2022-09-28 14:50:09.598274",
+  "name": "HOOK-0001",
+  "naming_series": "HOOK-.####",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "request_method": "POST",
+  "request_structure": "",
+  "request_url": "http://localhost:8000/api/method/goumitra_test.goumitra_test.hello_world.say_hello",
+  "webhook_data": [],
+  "webhook_docevent": "after_insert",
+  "webhook_doctype": "Goumitra PM Registration",
+  "webhook_headers": [],
+  "webhook_json": null,
+  "webhook_secret": null
+ }
+]

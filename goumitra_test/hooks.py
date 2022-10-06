@@ -172,8 +172,13 @@ user_data_fields = [
 	}
 ]
 
+
 # Authentication and authorization
 # --------------------------------
+
+#fixtures
+#Fixtures are added to save the customization done to the particular doc type. 
+fixtures = ['Custom Field','Report','Number Card','Client Script', 'Server Script','Property Setter', 'Workflow','Workflow State','Workflow Action Master','Webhook','Client Script']
 
 # auth_hooks = [
 # 	"goumitra_test.auth.validate"

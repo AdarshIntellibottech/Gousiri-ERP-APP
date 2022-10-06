@@ -1,0 +1,15 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "UserRegistration",
+  "enabled": 1,
+  "modified": "2022-10-04 17:56:17.512707",
+  "name": "UserRegistration-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "frappe.ui.form.on(\"UserRegistration\", {\r\n\tsetup: function(frm) {\r\n\t\tfrm.set_query(\"prayoga_mitra\", function() {\r\n\t\t\treturn {\r\n\t\t\t\tfilters: [\r\n\t\t\t\t\t[\"UserRegistration\",\"assigned_role\", \"in\", [\"PM\"]]\r\n\t\t\t\t]\r\n\t\t\t};\r\n\t\t});\r\n\t\tfrm.set_query(\"district_co_ordinator\", function() {\r\n\t\t\treturn {\r\n\t\t\t\tfilters: [\r\n\t\t\t\t\t[\"UserRegistration\",\"assigned_role\", \"in\", [\"DC\"]]\r\n\t\t\t\t]\r\n\t\t\t};\r\n\t\t});\r\n\t\t\r\n\t}\r\n});",
+  "view": "Form"
+ }
+]

@@ -20,5 +20,35 @@
   "webhook_headers": [],
   "webhook_json": null,
   "webhook_secret": null
+ },
+ {
+  "condition": "doc.assigned_role==\"DC\"\n",
+  "docstatus": 0,
+  "doctype": "Webhook",
+  "enable_security": 0,
+  "enabled": 1,
+  "modified": "2022-10-06 14:06:48.926469",
+  "name": "HOOK-0003",
+  "naming_series": "HOOK-.####",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "request_method": "POST",
+  "request_structure": "JSON",
+  "request_url": "http://localhost:8000/api/method/goumitra_test.goumitra_test.customer_register.register_customer",
+  "webhook_data": [],
+  "webhook_docevent": "after_insert",
+  "webhook_doctype": "UserRegistration",
+  "webhook_headers": [
+   {
+    "key": "Content-Type",
+    "parent": "HOOK-0003",
+    "parentfield": "webhook_headers",
+    "parenttype": "Webhook",
+    "value": "application/json"
+   }
+  ],
+  "webhook_json": "{\r\n\r\n\"token\":\"token f210b0dd5583f14:afc53fb4b09dbb8\",\r\n\"docname\":\"{{doc.name}}\",\r\n\"first_name\": \"{{doc.first_name}}\"\r\n\r\n}",
+  "webhook_secret": null
  }
 ]

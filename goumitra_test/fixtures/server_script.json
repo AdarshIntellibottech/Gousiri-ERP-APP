@@ -1,1 +1,36 @@
-[]
+[
+ {
+  "allow_guest": 1,
+  "api_method": "getDistrict",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "event_frequency": "All",
+  "modified": "2022-10-06 16:52:39.635779",
+  "name": "GetDistrictList",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "reference_doctype": null,
+  "script": "array_data=[]\r\nstateName=frappe.form_dict.state\r\nquery_data=frappe.db.sql(f\"\"\"SELECT DISTINCT `tabDistrictList`.district_name\r\nFROM `tabDistrictList`\r\nWHERE `tabDistrictList`.state_name='{stateName}'\"\"\");\r\nfor q in query_data:\r\n    array_data.extend(q)\r\nmsg = \"HI adarsh\"\r\nfrappe.response[\"message\"]= array_data",
+  "script_type": "API"
+ },
+ {
+  "allow_guest": 1,
+  "api_method": "GetTalukList",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "event_frequency": "All",
+  "modified": "2022-10-06 18:19:07.997116",
+  "name": "GetTalukList",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "reference_doctype": null,
+  "script": "array_data=[]\r\ndistrict_name=frappe.form_dict.district\r\nquery_data=frappe.db.sql(f\"\"\"SELECT DISTINCT `tabTalukList`.taluk_name\r\nFROM `tabTalukList`\r\nWHERE `tabTalukList`.district_name='{district_name}'\"\"\");\r\nfor q in query_data:\r\n    array_data.extend(q)\r\nmsg = \"HI adarsh\"\r\nfrappe.response[\"message\"]= array_data",
+  "script_type": "API"
+ }
+]

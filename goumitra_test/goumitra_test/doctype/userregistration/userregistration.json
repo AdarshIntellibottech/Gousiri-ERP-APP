@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GOUSIRI-{assigned_role}-{####}",
+ "creation": "2022-09-30 10:37:26.993038",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "phone_number",
+  "email",
+  "qualification",
+  "bank_name",
+  "bank_account_name",
+  "bank_account_number",
+  "ifsc_code",
+  "aadhar_number",
+  "upload_aadhar_card",
+  "pincode",
+  "state",
+  "district",
+  "taluk",
+  "house_no_building_name",
+  "crops_grown",
+  "farm_land_acre",
+  "farm_land_guntha",
+  "assigned_role",
+  "prayoga_mitra",
+  "district_co_ordinator"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "label": "Qualification"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account_name",
+   "fieldtype": "Data",
+   "label": "Bank Account Name"
+  },
+  {
+   "fieldname": "bank_account_number",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code"
+  },
+  {
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Number"
+  },
+  {
+   "fieldname": "upload_aadhar_card",
+   "fieldtype": "Attach Image",
+   "label": "Aadhar Photo Copy"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pin Code"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "StateList"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "DistrictList"
+  },
+  {
+   "fieldname": "taluk",
+   "fieldtype": "Link",
+   "label": "Taluk",
+   "options": "TalukList"
+  },
+  {
+   "fieldname": "house_no_building_name",
+   "fieldtype": "Data",
+   "label": "House No, Building Name"
+  },
+  {
+   "fieldname": "crops_grown",
+   "fieldtype": "Link",
+   "label": "Crops Grown",
+   "options": "Crops"
+  },
+  {
+   "fieldname": "farm_land_acre",
+   "fieldtype": "Data",
+   "label": "Farm Land in acre"
+  },
+  {
+   "fieldname": "farm_land_guntha",
+   "fieldtype": "Data",
+   "label": "Farm Land in guntha"
+  },
+  {
+   "fieldname": "assigned_role",
+   "fieldtype": "Select",
+   "label": "Assigned Role",
+   "options": "Choose\nDC\nPM\nFM",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.assigned_role=='FM'",
+   "fieldname": "prayoga_mitra",
+   "fieldtype": "Link",
+   "label": "Prayoga Mitra",
+   "options": "UserRegistration"
+  },
+  {
+   "depends_on": "eval:doc.assigned_role=='PM'",
+   "fieldname": "district_co_ordinator",
+   "fieldtype": "Link",
+   "label": "District Co-ordinator",
+   "options": "UserRegistration"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-10-06 15:00:58.775938",
+ "modified_by": "Administrator",
+ "module": "Goumitra Test",
+ "name": "UserRegistration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
